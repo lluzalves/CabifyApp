@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/animation_list_splash"
+                android:oneshot="false">
+    <item
+            android:drawable="@drawable/ic_shopping_cart_white"
+            android:duration="450" />
+    <item
+            android:drawable="@drawable/ic_sentiment_satisfied"
+            android:duration="450" />
+    <item
+            android:drawable="@drawable/ic_thumb_up"
+            android:duration="450" />
+</animation-list>

@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">resources</string>
+    <string name="app_name">Cabify Store</string>
     <string name="app_center_key">ad3890b2-d404-451a-a99e-a3063bd6eec0</string>
+    <string name="lets_shop">Let\'s shop !</string>
 </resources>
