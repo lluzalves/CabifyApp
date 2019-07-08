@@ -8,13 +8,13 @@ import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-fun <T> Observable<T>.async(): Observable<T> = this.compose { observable ->
+fun <T> Observable<T>.applyScheduler(): Observable<T> = this.compose { observable ->
     observable
         .subscribeOn(networkScheduler())
         .observeOn(mainThreadScheduler())
 }
 
-fun <T> Single<T>.async(): Single<T> = this.compose { single ->
+fun <T> Single<T>.applyScheduler(): Single<T> = this.compose { single ->
     single
         .subscribeOn(networkScheduler())
         .observeOn(mainThreadScheduler())

@@ -1,4 +1,4 @@
-package com.daniel.data.network.work
+package com.daniel.cabifyapp.work
 
 import android.content.Context
 import android.net.ConnectivityManager

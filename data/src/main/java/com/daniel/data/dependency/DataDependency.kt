@@ -1,6 +1,5 @@
 package com.daniel.data.dependency
 
-import com.app.daniel.domain.repository.IRepository
 import com.daniel.data.common.CabifyConstants
 import com.daniel.data.network.NetworkFactory
 import com.daniel.data.repository.RepositoryImpl
@@ -12,12 +11,11 @@ class DataDependency{
         return NetworkFactory().httpClient(CabifyConstants.CabifyStoreApi.BASE_URL).newBuilder().build()
     }
 
-    fun getRepository(): IRepository {
+    fun getRepository(): RepositoryImpl {
         return RepositoryImpl()
     }
 
     companion object{
-        val SHARED: DataDependency
-            get() = DataDependency()
+        val SHARED: DataDependency = DataDependency()
     }
 }

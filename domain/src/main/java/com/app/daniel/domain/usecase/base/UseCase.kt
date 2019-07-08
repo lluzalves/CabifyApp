@@ -1,7 +1,6 @@
-package com.app.daniel.salesforce.domain.usecase.base
+package com.app.daniel.domain.usecase.base
 
-import com.app.daniel.domain.usecase.base.IUseCase
-import com.app.daniel.salesforce.commons.async
+import com.app.daniel.salesforce.commons.applyScheduler
 import io.reactivex.Single
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
@@ -25,7 +24,7 @@ abstract class UseCase<T> : IUseCase {
     ){
         dispose()
         disposable = buildUseCase()
-            .async()
+            .applyScheduler()
             .doAfterTerminate(onFinished)
             .subscribe(onSuccess,onError)
         disposable.let { disposable ->

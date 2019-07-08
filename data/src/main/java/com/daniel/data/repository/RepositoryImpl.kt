@@ -1,6 +1,6 @@
 package com.daniel.data.repository
 
-import com.app.daniel.salesforce.commons.async
+import com.app.daniel.salesforce.commons.applyScheduler
 import com.app.daniel.domain.dto.Product
 import com.app.daniel.domain.repository.IRepository
 import com.daniel.data.dependency.DataDependency
@@ -15,7 +15,7 @@ class RepositoryImpl : IRepository {
         return httpClient.create(ProductsService::class.java)
             .getProducts()
             .map { response -> return@map response.mapToProductList() }
-            .async()
+            .applyScheduler()
     }
 
 }

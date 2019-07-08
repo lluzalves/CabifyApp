@@ -2,4 +2,12 @@
     <string name="app_name">Cabify Store</string>
     <string name="app_center_key">ad3890b2-d404-451a-a99e-a3063bd6eec0</string>
     <string name="lets_shop">Let\'s shop !</string>
+    <string name="snack_notification">%s</string>
+    <string name="order_is_processing">Your order is being processed. We will notify as soon as we finish. Thanks for buy !</string>
+    <string name="order_is_completed">Your order is completed. It will arrive soon!</string>
+    <string name="order_is_canceled">Your order is canceled. Sorry about that</string>
+    <string name="order_is_delivered">Hi, we noticed your order arrived. Hopefully everything is alright and if you need help just contact us ! You will look fantastic with your new items!</string>
+    <string name="unable_to_detect_connectivity">Unable to detected connectivity, please try again</string>
+    <string name="please_wait">Please wait</string>
+    <string name="error_view">"No valid parent found from the given view. It requires a valid view."</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.daniel.data.entity.product
 
-import com.daniel.data.common.JsonConverter
 import com.google.gson.annotations.SerializedName
 
 data class ProductEntity(
@@ -10,7 +9,7 @@ data class ProductEntity(
     val name: String,
     @SerializedName(PRICE)
     val price: String
-) : JsonConverter {
+) {
     companion object {
         const val CODE = "code"
         const val NAME = "name"
