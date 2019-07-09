@@ -8,6 +8,7 @@ object ProductAdapter {
     fun toProduct(productEntity: ProductEntity) = Product(
         code = productEntity.code,
         name = productEntity.name,
-        price = productEntity.price
+        price = productEntity.price,
+        quantity = productEntity.quantity
     )
 }

@@ -1,18 +1,14 @@
 package com.daniel.cabifyapp.base
 
 import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.Fragment
+import com.daniel.cabifyapp.view.CabifySnackBar
 
 abstract class BaseFragment : Fragment(), MvpView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         retainInstance = true
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onLoading(loadingMessage: String) {
@@ -24,11 +20,11 @@ abstract class BaseFragment : Fragment(), MvpView {
     }
 
     override fun onError(errorMessage: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        view?.let { CabifySnackBar.make(it, errorMessage).show() }
     }
 
     override fun onError(throwable: Throwable) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        view?.let { CabifySnackBar.make(it, throwable.localizedMessage).show() }
     }
 
     override fun onNextApplicationState() {

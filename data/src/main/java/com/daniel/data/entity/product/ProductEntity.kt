@@ -8,7 +8,8 @@ data class ProductEntity(
     @SerializedName(NAME)
     val name: String,
     @SerializedName(PRICE)
-    val price: String
+    val price: String,
+    var quantity: Int
 ) {
     companion object {
         const val CODE = "code"

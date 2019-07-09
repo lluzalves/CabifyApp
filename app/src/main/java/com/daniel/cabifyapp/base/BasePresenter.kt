@@ -3,6 +3,7 @@ package com.daniel.cabifyapp.base
 import androidx.work.*
 import com.daniel.cabifyapp.R
 import com.daniel.cabifyapp.application.CabifyApp
+import com.daniel.cabifyapp.store.StoreCart
 import com.daniel.cabifyapp.work.NetworkStateIWorkState
 import com.daniel.data.network.work.INetworkWorkState
 import io.reactivex.disposables.CompositeDisposable
@@ -14,9 +15,14 @@ abstract  class BasePresenter<V : MvpView> : MvpPresenter<V>, INetworkWorkState 
 
     val disposables: CompositeDisposable = CompositeDisposable()
     var mvpView: V? = null
+    lateinit var storeCart : StoreCart
 
     override fun attachView(mvpView: V) {
         this.mvpView = mvpView
+    }
+
+    fun currentCart(storeCart: StoreCart){
+        this.storeCart = storeCart
     }
 
     override fun onDetach() {

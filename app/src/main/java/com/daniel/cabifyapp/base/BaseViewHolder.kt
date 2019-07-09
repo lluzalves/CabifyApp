@@ -15,8 +15,8 @@ abstract class BaseViewHolder<T> protected constructor(itemView: View) : Recycle
 
     abstract fun blockItem()
 
-    abstract fun setClickListeners()
+    abstract fun setClickListener(itemView : View)
 
-    abstract fun clearClickListeners()
+    abstract fun clearClickListener(itemView : View)
 
 }

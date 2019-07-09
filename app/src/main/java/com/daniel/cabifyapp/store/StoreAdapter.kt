@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.app.daniel.domain.dto.Product
 import com.daniel.cabifyapp.R
 
-class StoreAdapter constructor(private val products: List<Product>) : RecyclerView.Adapter<StoreViewHolder>() {
+class StoreAdapter constructor(private val products: List<Product>, private val storeCart: StoreCart) : RecyclerView.Adapter<StoreViewHolder>() {
 
     lateinit var holder: StoreViewHolder
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.cell_product_item, null)
-        holder = StoreViewHolder(view)
+        holder = StoreViewHolder(view,storeCart)
         return holder
     }
 
