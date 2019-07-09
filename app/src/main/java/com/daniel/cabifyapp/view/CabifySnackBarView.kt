@@ -43,7 +43,7 @@ class CabifySnackBarView @JvmOverloads constructor(
         val scaleY = ObjectAnimator.ofFloat(cabify_logo, View.SCALE_Y, 1f, 0f)
         val animatorSet = AnimatorSet().apply {
             interpolator = OvershootInterpolator()
-            duration = 500
+            duration = 1000
             playTogether(scaleX, scaleY)
         }
         animatorSet.start()

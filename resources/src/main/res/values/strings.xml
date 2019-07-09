@@ -5,8 +5,10 @@
     <string name="cancel">Cancel</string>
     <string name="price">Price</string>
     <string name="add_to_basket">Add to basket</string>
+    <string name="added_to_basket">%s added to basket</string>
     <string name="network_resquest">Retrieving data, please wait</string>
     <string name="remove_from_basket">Remove from basket</string>
+    <string name="removed_from_basket">%s removed from basket</string>
     <string name="description">Description</string>
     <string name="app_center_key">ad3890b2-d404-451a-a99e-a3063bd6eec0</string>
     <string name="lets_shop">Let\'s shop !</string>

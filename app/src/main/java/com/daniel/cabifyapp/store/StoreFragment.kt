@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 class StoreFragment : BaseFragment(), StoreView, View.OnClickListener {
 
     lateinit var presenter: StorePresenter
-    lateinit var products: List<Product>
+    lateinit var products: ArrayList<Product>
     var inProgressOrder: Order = ApplicationDependency.SHARED.getInProgressOrder()
 
     override fun onCreateView(
@@ -48,7 +48,7 @@ class StoreFragment : BaseFragment(), StoreView, View.OnClickListener {
 
 
     override fun getProducts(products: List<Product>) {
-        this.products = products
+        this.products = ArrayList(products)
         for (product in inProgressOrder.products) {
             products.find { item -> item.code == product.code }?.quantity = product.quantity
         }
@@ -87,6 +87,7 @@ class StoreFragment : BaseFragment(), StoreView, View.OnClickListener {
     override fun removerFromCart(product: Product) {
         checkout_items_total.text = removeFromBasketItems(product)
         inProgressOrder.products.remove(product)
+        (productsRecycler.adapter as StoreAdapter).removeQuantityFromProductItem(product)
     }
 
     private fun removeFromBasketItems(product: Product): String {

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.app.daniel.domain.dto.Product
 import com.daniel.cabifyapp.R
 
-class StoreAdapter constructor(private val products: List<Product>, private val storeCart: StoreCart) : RecyclerView.Adapter<StoreViewHolder>() {
+class StoreAdapter constructor(private val products: ArrayList<Product>, private val storeCart: StoreCart) : RecyclerView.Adapter<StoreViewHolder>() {
 
     lateinit var holder: StoreViewHolder
 
@@ -22,5 +22,10 @@ class StoreAdapter constructor(private val products: List<Product>, private val 
 
     override fun onBindViewHolder(holder: StoreViewHolder, position: Int) {
         holder.show(products[position])
+    }
+
+    fun removeQuantityFromProductItem(product: Product) {
+        val position = products.indexOf(product)
+        products[position].quantity = 0
     }
 }
