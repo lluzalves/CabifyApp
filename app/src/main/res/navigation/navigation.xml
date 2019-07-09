@@ -9,6 +9,9 @@
         <action
                 android:id="@+id/action_homeFragment_to_productFragment"
                 app:destination="@id/productFragment"/>
+        <action
+                android:id="@+id/action_homeFragment_to_checkoutFragment"
+                app:destination="@id/checkoutFragment"/>
     </fragment>
     <fragment
             android:id="@+id/productFragment"
@@ -18,6 +21,14 @@
             app:exitAnim="@anim/slide_out_left">
         <action
                 android:id="@+id/action_productFragment_to_homeFragment"
+                app:destination="@id/homeFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/checkoutFragment"
+            android:name="com.daniel.cabifyapp.store.checkout.CheckoutFragment"
+            android:label="CheckoutFragment">
+        <action
+                android:id="@+id/action_checkoutFragment_to_homeFragment"
                 app:destination="@id/homeFragment"/>
     </fragment>
 </navigation>

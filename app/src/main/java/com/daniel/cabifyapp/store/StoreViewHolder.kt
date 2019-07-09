@@ -38,22 +38,6 @@ class StoreViewHolder constructor(itemView: View, private val storeCart: StoreCa
         ProductDrawables.onProductCodeSetBackground(code, itemView.productItem)
     }
 
-    override fun onErrorState() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun showItem() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun hideItem() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun blockItem() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
     override fun setClickListener(itemView: View) {
         itemView.setOnClickListener(this)
     }

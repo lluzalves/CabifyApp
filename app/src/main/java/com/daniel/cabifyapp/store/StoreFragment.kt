@@ -13,6 +13,7 @@ import com.daniel.cabifyapp.R
 import com.daniel.cabifyapp.base.BaseFragment
 import com.daniel.cabifyapp.dependency.ApplicationDependency
 import kotlinx.android.synthetic.main.cabify_bar.*
+import kotlinx.android.synthetic.main.fragment_checkout.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class StoreFragment : BaseFragment(), StoreView, View.OnClickListener {
@@ -106,7 +107,7 @@ class StoreFragment : BaseFragment(), StoreView, View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v) {
-            checkout -> Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_productFragment)
+            checkout -> Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_checkoutFragment)
         }
 
     }

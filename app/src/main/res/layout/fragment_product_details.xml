@@ -89,7 +89,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/productView"
             android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintEnd_toStartOf="@+id/productBasketAction"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/divider4"/>
 

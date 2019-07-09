@@ -1,4 +1,4 @@
-package com.app.daniel.salesforce.domain;
+package com.app.daniel.domain;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
