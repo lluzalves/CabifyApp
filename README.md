@@ -1,3 +1,17 @@
+# Demo
+
+![cabify_store_app_demo](https://user-images.githubusercontent.com/8259531/61010529-fda80600-a34c-11e9-8cd0-dcb7f532f4c1.gif)
+
+# Development 
+
+- Clean Architecture + MVP Pattern
+- Kotlin Language
+- Main libs : Room, RxAndroid, Retrofit
+- Custom Dependency injection framework (less intrusive and more simple to apply)
+- Modularity [ domain, data, log, resources, commons, analytics, app ]
+- AppCenter to track events and visualize crash infos, like purchases
+
+------------------------------------------------------------------------
 # Cabify Mobile Challenge
 
 Besides providing exceptional transportation services, Cabify also runs a physical store which sells Products.
