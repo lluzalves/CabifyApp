@@ -25,6 +25,7 @@ class CustomerTextWatcher(
         }
         if (address.text.isNullOrEmpty()) {
             address.error = errorMessage
+
         } else {
             address.error = null
         }
@@ -43,6 +44,7 @@ class CustomerTextWatcher(
         } else {
             cellphone.error = null
         }
+        storeCheckout.blockCheckout()
     }
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {

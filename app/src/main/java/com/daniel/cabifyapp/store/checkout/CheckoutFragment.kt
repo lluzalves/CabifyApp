@@ -216,6 +216,10 @@ class CheckoutFragment : BaseFragment(), CheckoutView, StoreCheckout, View.OnCli
             )
     }
 
+    override fun blockCheckout() {
+        canCheckout = false
+    }
+
 
     override fun clear() {
         (productsRecyclerCheckout.adapter as CheckoutAdapter).clearOrder()

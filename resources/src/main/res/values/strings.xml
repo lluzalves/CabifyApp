@@ -43,10 +43,10 @@
     <string name="not_applicable">0</string>
     <string name="please_inform">Please provide requested information</string>
     <string name="warning">Warning</string>
-    <string name="customer_name">Name - Please inform your complete name</string>
-    <string name="address_street">Address - Please inform your complete address</string>
-    <string name="customer_cellphone">Cellphone - Please inform your contact cellphone</string>
-    <string name="customer_email">Email - Please inform your contact email</string>
+    <string name="customer_name">Name</string>
+    <string name="address_street">Address</string>
+    <string name="customer_cellphone">Cellphone</string>
+    <string name="customer_email">Email</string>
     <string name="ok">Ok</string>
     <string name="empty_basket">Your basket is empty, please add a product to it and try again</string>
     <string name="warning_removing_item">Are you sure you want to remove this item from your basket ?</string>
