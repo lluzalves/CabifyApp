@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RadioButton
+                android:text="@string/credit_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton" android:layout_weight="1"/>
+        <RadioButton
+                android:text="@string/debit_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton3" android:layout_weight="1"/>
+        <RadioButton
+                android:text="@string/voucher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton2" android:layout_weight="1"/>
+    </RadioGroup>
+    <TextView
+            android:layout_marginTop="20dp"
+            android:text="@string/order_total_amount"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content" android:id="@+id/orderTotal"/>
+    <TextView
+            android:text="@string/order_total_discounts"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content" android:id="@+id/orderDiscount"/>
+    <TextView
+            android:text="@string/order_total_billing"
+            android:layout_width="match_parent"
+            android:gravity="center"
+
+            android:layout_height="wrap_content" android:id="@+id/orderBilling"/>
+    <TextView
+            android:text="@string/order_charged_at"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/default_text_size"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_height="wrap_content" android:id="@+id/orderChargedAt"/>
+</LinearLayout>

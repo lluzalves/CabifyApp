@@ -26,6 +26,5 @@ class EventBuilder {
         const val STARTED_APP = "started app"
         const val CHECKING_NETWORK = "network checker"
         const val PURCHASE = "purchase"
-        const val TOTAL_INVOICE_ITEMS = "total items"
     }
 }

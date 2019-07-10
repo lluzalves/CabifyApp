@@ -103,7 +103,7 @@ class ProductFragment : BaseFragment(), ProductView, View.OnClickListener {
                     this.positiveButton(R.string.confirm) {
                         product.quantity = productQuantity.text.toString().toInt()
                         addToCart(product)
-                        view?.let { CabifySnackBar.make(it,String().format(getString(R.string.added_to_basket),product.name)).show() }
+                        view?.let { CabifySnackBar.make(it,String.format(getString(R.string.added_to_basket),product.name)).show() }
 
                     }
                     this.cornerRadius(16f)

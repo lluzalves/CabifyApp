@@ -14,7 +14,7 @@ interface OrderDao {
     fun getOrders(): Single<List<OrderEntity>>
 
 
-    @Query("select * from orders where id = :orderId")
+    @Query("SELECT * FROM orders WHERE id = :orderId")
     fun getOrder(orderId: Long): Single<OrderEntity>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

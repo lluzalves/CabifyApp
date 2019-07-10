@@ -1,13 +1,11 @@
 package com.daniel.data.entity.order
 
 import androidx.annotation.NonNull
-import androidx.room.ColumnInfo
-import androidx.room.Embedded
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
 import com.app.daniel.domain.dto.Product
 import com.app.daniel.domain.entities.Customer
 import com.daniel.data.entity.BaseEntity
+import com.google.gson.Gson
 
 @Entity(tableName = OrderEntity.NAME)
 data class OrderEntity(
@@ -23,16 +21,16 @@ data class OrderEntity(
     override var updatedAt: String,
 
     @ColumnInfo(name = Columns.ORDER_TOTAL_AMOUNT)
-    var totalAmount: Int,
+    var totalAmount: Double,
 
     @ColumnInfo(name = Columns.ORDER_DISCOUNTS)
-    var orderDiscounts: Int,
+    var orderDiscounts: Double,
 
     @ColumnInfo(name = Columns.ORDER_BILLING_AMOUNT)
-    var billingAmount: Int,
+    var billingAmount: Double,
 
-    @Embedded
-    val products: ArrayList<Product>,
+    @TypeConverters(ProductConverter::class)
+    val products: List<Product>,
 
     @Embedded
     val customer: Customer
@@ -50,6 +48,21 @@ data class OrderEntity(
             const val ORDER_BILLING_AMOUNT = "order_billing"
             const val CREATED_AT = "created_at"
             const val UPDATED_AT = "updated_at"
+        }
+    }
+
+    class ProductConverter {
+        @TypeConverter
+        fun listToJson(value: List<Product>?): String {
+
+            return Gson().toJson(value)
+        }
+
+        @TypeConverter
+        fun jsonToList(value: String): List<Product>? {
+
+            val products = Gson().fromJson(value, Array<Product>::class.java) as Array<Product>
+            return products.toList()
         }
     }
 }

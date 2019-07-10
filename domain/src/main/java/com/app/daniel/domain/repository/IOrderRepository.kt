@@ -5,4 +5,5 @@ import io.reactivex.Single
 interface IOrderRepository : IRepository<Order> {
     fun insertOrder(order: Order): Single<Long>
     fun retrieveOrder(orderId : Long): Single<Order>
+    fun retrieveOrders():Single<List<Order>>
 }
