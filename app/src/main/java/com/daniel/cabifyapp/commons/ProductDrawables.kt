@@ -6,14 +6,20 @@ import com.daniel.cabifyapp.R
 
 class ProductDrawables {
     companion object {
-        fun onProductCodeSetBackground(code: String, view: ImageView) {
+        fun onProductCodeSetBackground(code: String, view: ImageView, isDetailsView : Boolean) {
             when (code) {
                 "VOUCHER" -> {
                     view.setImageDrawable(
-                        ContextCompat.getDrawable(
-                            view.context,
-                            R.drawable.ic_cabify_logo_color_rgb
-                        )
+                        when {
+                            isDetailsView -> ContextCompat.getDrawable(
+                                view.context,
+                                R.drawable.ic_cabify_logo_color_white
+                            )
+                            else -> ContextCompat.getDrawable(
+                                view.context,
+                                R.drawable.ic_cabify_logo_color_rgb
+                            )
+                        }
                     )
                 }
                 "TSHIRT" -> {

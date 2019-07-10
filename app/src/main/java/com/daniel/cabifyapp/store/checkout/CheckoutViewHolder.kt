@@ -29,7 +29,7 @@ class CheckoutViewHolder constructor(itemView: View, private val storeCheckout: 
     }
 
     private fun setProductImage(code: String) {
-        ProductDrawables.onProductCodeSetBackground(code, itemView.productItemCheckout)
+        ProductDrawables.onProductCodeSetBackground(code, itemView.productItemCheckout, isDetailsView = false)
     }
 
     override fun setClickListener(itemView: View) {

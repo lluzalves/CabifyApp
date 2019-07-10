@@ -47,7 +47,7 @@ class ProductFragment : BaseFragment(), ProductView, View.OnClickListener {
     private fun initializeUiState(product: Product) {
         name.text = product.name
         price.text = productPresenter.convert(product.price)
-        ProductDrawables.onProductCodeSetBackground(product.code, productView)
+        ProductDrawables.onProductCodeSetBackground(product.code, productView, isDetailsView = true)
         productBasketAction.text = if (product.quantity > 0) {
             getString(R.string.remove_from_basket)
         } else {

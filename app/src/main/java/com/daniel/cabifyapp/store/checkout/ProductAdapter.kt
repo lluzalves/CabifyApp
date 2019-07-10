@@ -53,7 +53,7 @@ class ProductAdapter constructor(private val context: Context, private val dataS
                 context.getString(R.string.discount_amount), context.getString(R.string.not_applicable)
             )
         }
-        ProductDrawables.onProductCodeSetBackground(product.code,avatar)
+        ProductDrawables.onProductCodeSetBackground(product.code,avatar, isDetailsView = false)
         return rowView
     }
 

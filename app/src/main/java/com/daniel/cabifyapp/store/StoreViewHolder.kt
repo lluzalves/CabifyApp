@@ -35,7 +35,7 @@ class StoreViewHolder constructor(itemView: View, private val storeCart: StoreCa
     }
 
     private fun setProductImage(code: String) {
-        ProductDrawables.onProductCodeSetBackground(code, itemView.productItem)
+        ProductDrawables.onProductCodeSetBackground(code, itemView.productItem, isDetailsView = false)
     }
 
     override fun setClickListener(itemView: View) {
