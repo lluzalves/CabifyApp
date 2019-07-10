@@ -18,6 +18,7 @@ class CheckoutAdapter constructor(private val order: Order, private val storeChe
         return holder
     }
 
+
     override fun getItemCount(): Int {
         return order.products.size
     }
@@ -38,5 +39,10 @@ class CheckoutAdapter constructor(private val order: Order, private val storeChe
         val position = order.products.indexOf(product)
         order.products.remove(product)
         notifyItemRemoved(position)
+    }
+
+    fun clearOrder() {
+        order.products.clear()
+        notifyDataSetChanged()
     }
 }

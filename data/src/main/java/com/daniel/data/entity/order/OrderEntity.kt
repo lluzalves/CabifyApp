@@ -11,10 +11,10 @@ import com.daniel.data.entity.BaseEntity
 
 @Entity(tableName = OrderEntity.NAME)
 data class OrderEntity(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     @NonNull
     @ColumnInfo(name = Columns.ID)
-    override var id: Int?,
+    override var id: Long = System.currentTimeMillis(),
 
     @ColumnInfo(name = Columns.CREATED_AT)
     override var createdAt: String,
@@ -31,11 +31,9 @@ data class OrderEntity(
     @ColumnInfo(name = Columns.ORDER_BILLING_AMOUNT)
     var billingAmount: Int,
 
-    @ColumnInfo(name = Columns.PRODUCT)
     @Embedded
     val products: ArrayList<Product>,
 
-    @ColumnInfo(name = Columns.CUSTOMER)
     @Embedded
     val customer: Customer
 ) : BaseEntity {

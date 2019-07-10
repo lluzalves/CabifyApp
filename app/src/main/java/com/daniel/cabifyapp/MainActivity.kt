@@ -12,7 +12,6 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         setContentView(R.layout.activity_main)
-        ApplicationDependency.SHARED.inject()
         ApplicationDependency.SHARED.inject(this)
     }
 

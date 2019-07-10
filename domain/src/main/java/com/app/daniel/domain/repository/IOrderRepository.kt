@@ -3,6 +3,6 @@ import com.app.daniel.domain.entities.Order
 import io.reactivex.Single
 
 interface IOrderRepository : IRepository<Order> {
-    fun insertOrder(order: Order): Long
-    fun retrieveOrder(orderId : String): Single<Order>
+    fun insertOrder(order: Order): Single<Long>
+    fun retrieveOrder(orderId : Long): Single<Order>
 }

@@ -12,11 +12,13 @@ class OrderRepository : IOrderRepository {
     override fun retrieveList(): Single<List<Order>> {
         return database?.orderDao?.getOrders()?.map { orderEntities -> OrderAdapter().fromDatabase(orderEntities) } as Single<List<Order>>
     }
-    override fun insertOrder(order: Order): Long {
-        return database?.orderDao?.insertOrder(OrderAdapter().toOrderEntity(order)) ?: -1
+
+    override fun insertOrder(order: Order): Single<Long> {
+        return database?.orderDao?.insertOrder(OrderAdapter().toOrderEntity(order)) ?: Single.just((-1).toLong())
     }
 
-    override fun retrieveOrder(orderId: String): Single<Order> {
+    override fun retrieveOrder(orderId: Long): Single<Order> {
         return database?.orderDao?.getOrder(orderId)?.map { orderEntity -> OrderAdapter().toOrder(orderEntity) } as Single<Order>
     }
+
 }

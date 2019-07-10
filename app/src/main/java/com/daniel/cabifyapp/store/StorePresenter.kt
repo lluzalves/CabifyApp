@@ -5,7 +5,7 @@ import com.daniel.cabifyapp.dependency.ApplicationDependency
 
 class StorePresenter : BasePresenter<StoreView>() {
 
-    private val useCase = ApplicationDependency.SHARED.retrieveUseCase()
+    private val useCase = ApplicationDependency.SHARED.retrieveProductUseCase()
 
        fun requestStoreProducts() {
         useCase?.execute(

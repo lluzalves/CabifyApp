@@ -5,6 +5,7 @@ import com.daniel.data.entity.order.OrderEntity
 
 class OrderAdapter {
     fun toOrder(orderEntity: OrderEntity) = Order(
+        id = orderEntity.id,
         products = orderEntity.products,
         customer = orderEntity.customer,
         totalAmount = orderEntity.totalAmount,
@@ -15,7 +16,7 @@ class OrderAdapter {
     )
 
     fun toOrderEntity(order: Order) = OrderEntity(
-        id = null,
+        id = System.currentTimeMillis(),
         products = order.products,
         customer = order.customer,
         totalAmount = order.totalAmount,

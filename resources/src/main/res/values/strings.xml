@@ -4,8 +4,13 @@
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
     <string name="price">Price</string>
+    <string name="dismiss">Dismiss</string>
     <string name="add_to_basket">Add to basket</string>
     <string name="added_to_basket">%s added to basket</string>
+    <string name="product">Product - %s</string>
+    <string name="quantity">Quantity - %s</string>
+    <string name="total">Total - $%s</string>
+    <string name="prod_price">Price - $%s</string>
     <string name="network_resquest">Retrieving data, please wait</string>
     <string name="remove_from_basket">Remove from basket</string>
     <string name="removed_from_basket">%s removed from basket</string>
@@ -13,14 +18,26 @@
     <string name="app_center_key">ad3890b2-d404-451a-a99e-a3063bd6eec0</string>
     <string name="lets_shop">Let\'s shop !</string>
     <string name="snack_notification">%s</string>
-    <string name="order_is_processing">Your order is being processed. We will notify as soon as we finish. Thanks for buy !</string>
+    <string name="order_is_processing">Your order is being processed. We will notify as soon as we finish. Thanks for
+        buy !
+    </string>
+    <string name="order_error">"There was an error"</string>
     <string name="order_is_completed">Your order is completed. It will arrive soon!</string>
     <string name="add_product_quantity">Quantity</string>
+    <string name="checkout_title">Checkout Basket</string>
+    <string name="checkout_order_details">Checkout Basket</string>
+    <string name="billing_total">Billing Total $ %s</string>
+    <string name="total_amount">Order Total Amount $ %s</string>
+    <string name="discount_amount">Discount - $%s</string>
+    <string name="not_applicable">0</string>
     <string name="warning">Warning</string>
     <string name="warning_removing_item">Are you sure you want to remove this item from your basket ?</string>
+    <string name="order_details">Order Details</string>
     <string name="inform_product_quantity">Please inform the quantity that you would like to order</string>
     <string name="order_is_canceled">Your order is canceled. Sorry about that</string>
-    <string name="order_is_delivered">Hi, we noticed your order arrived. Hopefully everything is alright and if you need help just contact us ! You will look fantastic with your new items!</string>
+    <string name="order_is_delivered">Hi, we noticed your order arrived. Hopefully everything is alright and if you need
+        help just contact us ! You will look fantastic with your new items!
+    </string>
     <string name="unable_to_detect_connectivity">Unable to detected connectivity, please try again</string>
     <string name="please_wait">Please wait</string>
     <string name="error_view">"No valid parent found from the given view. It requires a valid view."</string>

@@ -10,10 +10,11 @@ class CabifyApp : Application() {
 
     override fun onCreate() {
         appInstance = this
-        super.onCreate()
+        ApplicationDependency.SHARED.inject()
         AppLogger(this)
         AppAnalyser(this)
         EventBuilder().createEvent().addProperty(EventBuilder.STARTED_APP, System.currentTimeMillis().toString())
+        super.onCreate()
     }
 
     companion object {

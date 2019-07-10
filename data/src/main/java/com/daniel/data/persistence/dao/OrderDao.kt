@@ -15,8 +15,8 @@ interface OrderDao {
 
 
     @Query("select * from orders where id = :orderId")
-    fun getOrder(orderId: String): Single<OrderEntity>
+    fun getOrder(orderId: Long): Single<OrderEntity>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertOrder(orderEntity: OrderEntity): Long
+    fun insertOrder(orderEntity: OrderEntity): Single<Long>
 }

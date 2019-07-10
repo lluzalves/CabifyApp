@@ -54,7 +54,7 @@ class CheckoutViewHolder constructor(itemView: View, private val storeCheckout: 
                 this.title(R.string.warning)
                 this.message(R.string.warning_removing_item)
                 this.positiveButton(R.string.confirm) {
-                    storeCheckout.removerFromCart(product)
+                    storeCheckout.removeFromCart(product)
                 }
                 this.negativeButton(R.string.cancel) {
                     it.dismiss()

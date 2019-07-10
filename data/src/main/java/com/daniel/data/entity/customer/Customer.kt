@@ -12,7 +12,7 @@ data class CustomerEntity(
     @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = Columns.ID)
-    override var id: Int,
+    override var id: Long,
 
     @ColumnInfo(name = Columns.CREATED_AT)
     override var createdAt: String,

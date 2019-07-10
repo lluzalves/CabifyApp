@@ -1,7 +1,7 @@
 package com.daniel.data.entity
 
 interface BaseEntity {
-    val id: Int?
+    val id: Long
     val createdAt: String
     var updatedAt: String
 }

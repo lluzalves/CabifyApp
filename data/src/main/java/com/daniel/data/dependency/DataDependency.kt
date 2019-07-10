@@ -4,19 +4,24 @@ import android.app.Application
 import com.daniel.data.common.CabifyConstants
 import com.daniel.data.network.NetworkFactory
 import com.daniel.data.persistence.AppDatabase
+import com.daniel.data.repository.OrderRepository
 import com.daniel.data.repository.ProductRepository
 import retrofit2.Retrofit
 
 class DataDependency{
 
-    private lateinit var application : Application;
+    private lateinit var application : Application
 
     fun getCabifyApiClient():Retrofit{
         return NetworkFactory().httpClient(CabifyConstants.CabifyStoreApi.BASE_URL).newBuilder().build()
     }
 
-    fun getRepository(): ProductRepository {
+    fun getProductRepository(): ProductRepository {
         return ProductRepository()
+    }
+
+    fun getOrderRepository() : OrderRepository{
+        return OrderRepository()
     }
 
     fun inject(application: Application){

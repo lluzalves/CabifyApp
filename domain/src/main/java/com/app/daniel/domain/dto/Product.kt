@@ -7,4 +7,10 @@ data class Product(
     val name: String,
     val price: String,
     var quantity: Int
-) : Serializable
+) : Serializable {
+    object Code {
+        const val TSHIRT = "TSHIRT"
+        const val VOUCHER = "VOUCHER"
+        const val MUG = "MUG"
+    }
+}
